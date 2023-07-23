@@ -1,0 +1,28 @@
+.price-item {
+    background: #45c471;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    max-height: 300px;
+    height: 120px;
+    border: 1px solid  #645d06;
+    box-shadow: #4b4a3f;
+    justify-content: space-between;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+
+    &__itemName {
+        font-size: 1.5em;
+    }
+
+    &__cost {
+        border: rgb(45, 34, 114);
+        background: rgb(205, 200, 76);
+        width: 70px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 3px;
+    }
+}
