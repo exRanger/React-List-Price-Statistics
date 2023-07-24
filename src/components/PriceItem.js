@@ -1,14 +1,15 @@
 import './PriceItem.scss'
 
-export function PriceItem() {
+export function PriceItem({dateCreateOfItem, item, price}) {
+    const creationDate = dateCreateOfItem.toLocaleDateString();
     return (
         <div className="price-item">
-                <div>Date: March 2022.23</div>
+                <div>{creationDate}</div>
                 <div className='price-item__itemName'>
-                    <strong>Iphone 11</strong>
+                    <strong>{item}</strong>
                 </div>
                 <div className="price-item__cost">
-                    $1359
+                    {price}
                 </div>
         </div>
     )
