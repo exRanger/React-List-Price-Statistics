@@ -1,6 +1,7 @@
 .price-item {
     background: #45c471;
     display: flex;
+    gap: 6px;
     align-items: center;
     border-radius: 3px;
     max-height: 300px;
@@ -11,13 +12,24 @@
     padding: 12px;
     color: white;
     font-weight: bold;
+    margin: 15px 3px 15px;
+
+    &__dateCreate {
+        box-shadow: 0px 0px 3px #09aa41;
+        border-radius: 3px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
 
     &__itemName {
         font-size: 1.5em;
+        text-align: center;
     }
 
     &__cost {
-        border: rgb(45, 34, 114);
+        border: 1px solid rgb(45, 34, 114);
         background: rgb(205, 200, 76);
         width: 70px;
         height: 30px;

@@ -1,14 +1,8 @@
-import { PriceItem } from "./components/PriceItem";
+import {PriceBlock} from "./components/PriceBlock";
 
-function App() {
-  const dataItem = {
-    dateCreateOfItem: new Date(2023,7, 24),
-    item: 'Iphone',
-    price: '$1399'
-  } 
-  
+function App() {  
   return <>
-      <PriceItem {...dataItem} />
+    <PriceBlock/>
   </>
   
 }
