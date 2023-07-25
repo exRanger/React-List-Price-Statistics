@@ -26,7 +26,7 @@ export const PriceBlock = ({}) => {
     return <>
         <div className="priceBlock">
             {priceOfIems.map((item) => {
-                return <PriceItem {...item} key={item.id} />
+                return <PriceItem {...item} key={new Date.now()} />
             })}
         </div>
     </>
