@@ -23,10 +23,11 @@ export const PriceBlock = ({}) => {
         }  
     ];
 
+    const gereratedRandomKey = new Date.now();
     return <>
         <div className="priceBlock">
             {priceOfIems.map((item) => {
-                return <PriceItem {...item} key={new Date.now()} />
+                return <PriceItem {...item} key={gereratedRandomKey} />
             })}
         </div>
     </>
