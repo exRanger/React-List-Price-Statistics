@@ -9,7 +9,7 @@ export function PriceItem({dateCreateOfItem, item, price}) {
                     <strong>{item}</strong>
                 </div>
                 <div className="price-item__cost">
-                    ${price}
+                    Current: ${price}
                 </div>
         </div>
     )
