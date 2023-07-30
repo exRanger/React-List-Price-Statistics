@@ -1,4 +1,11 @@
-export default ({}) => {
+/**
+ * Header
+ * @description React Functional Component
+ * @param {IProps} props Props.
+ * @result JSX
+ * @public
+ */
+export default function Header({}) {
     return (
         <>
             <div className="header">
@@ -54,4 +61,4 @@ export default ({}) => {
             </div>
         </>
     );
-};
+}
