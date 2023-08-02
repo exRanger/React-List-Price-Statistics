@@ -7,6 +7,7 @@
  */
 export default function Header({}) {
     return (
+        {//TODO: split into components }
         <>
             <div className="header">
                 <div className="container">
