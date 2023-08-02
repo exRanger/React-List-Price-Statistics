@@ -4,6 +4,8 @@ import PizzaItem from './components/PizzaItem/PizzaItem';
 import Sort from './components/Sort/Sort';
 import './scss/app.scss';
 
+import pizzas from './assets/pizzas.json'
+
 function App() {
     return (
         <>
@@ -18,35 +20,12 @@ function App() {
                         </div>
                         <h2 className="content__title">Все пиццы</h2>
                         <div className="content__items">
-                            <PizzaItem
-                                title="classic"
-                                type="large"
-                                size={40}
-                                price="15"
-                            />
-                            <PizzaItem
-                                title="vegetarian"
-                                type="thin"
-                                size={22}
-                                price="21"
-                            />
-                            <PizzaItem
-                                title="mexican"
-                                type="large"
-                                size={25}
-                                price="19"
-                            />
-                            <PizzaItem
-                                title="peperoni"
-                                type="large"
-                                size={35}
-                                price="24"
-                            />
-                            <PizzaItem />
-                            <PizzaItem />
-                            <PizzaItem />
-                            <PizzaItem />
-                            <PizzaItem />
+                            {pizzas.map((item, index) => {
+                                return <PizzaItem
+                                    key={index}
+                                    {...item}
+                                />
+                            })}
                         </div>
                     </div>
                 </div>
