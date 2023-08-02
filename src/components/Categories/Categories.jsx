@@ -3,6 +3,7 @@ import {useState} from 'react';
 export default function Categories({}) {
     const [category, setCategory] = useState(0)
     const setCategoryHandler = (e) => {
+        // data-set <li>'s attr
         const{activeId} = e.target.dataset;
         setCategory(Number(activeId));
     }
