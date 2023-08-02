@@ -3,9 +3,9 @@
 .button {
     display: inline-block;
     background-color: $orange;
-    border-radius: 30px;
+    border-radius: $border-radius-base;
     padding: 10px 20px;
-    min-width: 100px;
+    min-width: $base-width;
     text-align: center;
     cursor: pointer;
     transition: background-color $duration ease-in-out,
@@ -91,7 +91,7 @@
     &__delimiter {
         width: 1px;
         height: 25px;
-        background-color: rgba(255, 255, 255, 0.25);
+        background-color: rgba(23, 11, 11, 0.25);
         margin-left: 14px;
         margin-right: 14px;
     }
