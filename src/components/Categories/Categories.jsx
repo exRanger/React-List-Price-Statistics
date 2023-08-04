@@ -1,13 +1,13 @@
 import {useState} from 'react';
 
 export default function Categories({}) {
-    const [category, setCategory] = useState(0)
+    const [category, setCategory] = useState(0);
     const setCategoryHandler = (e) => {
         // data-set <li>'s attr
         const {activeId} = e.target.dataset;
         // typeof activeId - string 
         setCategory(Number(activeId));
-    }
+    };
     const pizzaType = ['All', 'Cheese', 'SeaFish', 'Hot', 'Vegan', 'Chicken'];
     return (
         <div onClick={setCategoryHandler} className="categories">
