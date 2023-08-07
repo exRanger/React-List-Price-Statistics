@@ -30,7 +30,7 @@ export default function Sort({}) {
                 <b>Sorted by:</b>
                 <span>{popupItems[sort.chosenItem]}</span>
             </div>
-            { sort.isSortClicked && 
+            {sort.isSortClicked && 
                 <div className="sort__popup">
                     <ul>
                         {popupItems.map((item, index) => (
