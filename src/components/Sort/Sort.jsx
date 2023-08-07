@@ -6,6 +6,7 @@ export default function Sort({}) {
             chosenItem: false
         });
     const sortHandleClick = (e) => {
+        //TODO: check for click sort-item
         setSort({
             isSortClicked: !sort.isSortClicked,
             chosenItem: e.target.dataset.sortId
