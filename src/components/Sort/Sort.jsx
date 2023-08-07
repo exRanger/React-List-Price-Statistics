@@ -1,6 +1,20 @@
+import React, {useState} from 'react';
 export default function Sort({}) {
+    const [sort, setSort] = useState(
+        {
+            isSortClicked: true,
+            chosenItem: false
+        });
+    const sortHandleClick = (e) => {
+        setSort({
+            isSortClicked: !sort.isSortClicked,
+            chosenItem: e.target.dataset.sortId
+        });
+        console.log(e.target.dataset.sortId);
+    }
+    const popupItems = ['popularity', 'price', 'abc', 'rating'];
     return (
-        <div className="sort">
+        <div onClick={sortHandleClick}className="sort">
             <div className="sort__label">
                 <svg
                     width="10"
@@ -14,16 +28,20 @@ export default function Sort({}) {
                         fill="#2C2C2C"
                     />
                 </svg>
-                <b>Сортировка по:</b>
-                <span>популярности</span>
+                <b>Sorted by:</b>
+                <span>{popupItems[sort.chosenItem]}</span>
             </div>
-            <div className="sort__popup">
-                <ul>
-                    <li className="active">популярности</li>
-                    <li>цене</li>
-                    <li>алфавиту</li>
-                </ul>
-            </div>
+            { sort.isSortClicked && 
+                <div className="sort__popup">
+                    <ul>
+                        {popupItems.map((item, index) => (
+                            <li data-sort-id={index}
+                                key={index}
+                                className={sort.chosenItem === index && 'active'}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+            }
         </div>
     );
 }
