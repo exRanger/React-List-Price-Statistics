@@ -10,7 +10,6 @@ export default function Sort({}) {
             isSortClicked: !sort.isSortClicked,
             chosenItem: e.target.dataset.sortId
         });
-        console.log(e.target.dataset.sortId);
     }
     const popupItems = ['popularity', 'price', 'abc', 'rating'];
     return (
