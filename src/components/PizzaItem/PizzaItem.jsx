@@ -1,11 +1,9 @@
 import {useState} from 'react';
 
 export default function PizzaItem({
-    title = 'classic',
-    type = 'thin',
-    size = 26,
-    price = 20
-}) {
+        imageSrc, title, types, sizes, 
+        price, category, rating
+    }){
     const [count, setCount] = useState(0);
     const handleCount = () => {
         setCount(count + 1);
@@ -14,17 +12,17 @@ export default function PizzaItem({
         <div className="pizza-block">
             <img
                 className="pizza-block__image"
-                src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                src={imageSrc}
                 alt="Pizza"
             />
             <h4 className="pizza-block__title">{title}</h4>
             <div className="pizza-block__selector">
                 <ul>
-                    <li className="active">{type}</li>
+                    <li className="active">{0}</li>
                     <li>традиционное</li>
                 </ul>
                 <ul>
-                    <li className="active">{size} sm.</li>
+                    <li className="active">{0} sm.</li>
                     <li>30 sm.</li>
                     <li>40 sm.</li>
                 </ul>

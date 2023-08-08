@@ -8,6 +8,7 @@ import React from 'react';
  */
 export default function Header({}) {
     return (
+        //TODO: split into components
         <>
             <div className="header">
                 <div className="container">
@@ -15,7 +16,7 @@ export default function Header({}) {
                         <img
                             width="80"
                             height={100}
-                            src="img/dear-pizza-logo.svg"
+                            src="assets/img/dear-pizza-logo.svg"
                             alt="Pizza logo"
                         />
                         <div className='header__logoText'>
