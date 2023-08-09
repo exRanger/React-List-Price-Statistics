@@ -6,10 +6,11 @@ export default function Sort({}) {
             chosenItem: false
         });
     const sortHandleClick = (e) => {
-        setSort({
+        let constSortKey = {
             isSortClicked: !sort.isSortClicked,
-            chosenItem: e.target.dataset.sortId
-        });
+            chosenItem: e.target.dataset.sortId || sort.chosenItem
+        };
+        setSort(constSortKey);
         console.log(e.target.dataset.sortId);
     }
     const popupItems = ['popularity', 'price', 'abc', 'rating'];
@@ -29,7 +30,7 @@ export default function Sort({}) {
                     />
                 </svg>
                 <b>Sorted by:</b>
-                <span>{popupItems[sort.chosenItem]}</span>
+                <span>{popupItems[sort?.chosenItem]}</span>
             </div>
             { sort.isSortClicked && 
                 <div className="sort__popup">
@@ -37,7 +38,7 @@ export default function Sort({}) {
                         {popupItems.map((item, index) => (
                             <li data-sort-id={index}
                                 key={index}
-                                className={sort.chosenItem === index && 'active'}>{item}</li>
+                                className={sort?.chosenItem === index && 'active'}>{item}</li>
                         ))}
                     </ul>
                 </div>
