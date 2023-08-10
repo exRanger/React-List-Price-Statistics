@@ -7,9 +7,23 @@ export default function PizzaItem({
     price = 20
 }) {
     const [count, setCount] = useState(0);
+    const [typePizza, setTypePizza] = useState({type: 0, size: 30});
     const handleCount = () => {
         setCount(count + 1);
     }
+    const handleClickOfType = (e) => {
+        let {
+            type: chosenTypePizza = typePizza.type,
+            size: chosenSizePizza = typePizza.size
+        } = e.target.dataset;
+        setTypePizza({
+            type: +chosenTypePizza,
+            size: +chosenSizePizza
+        });
+    }
+    //TODO: convert to TS ENUM
+    const pizzaType = ['Thin', 'Traditional'];
+    const pizzaSize = [30,33,35];
     return (
         <div className="pizza-block">
             <img
@@ -18,15 +32,25 @@ export default function PizzaItem({
                 alt="Pizza"
             />
             <h4 className="pizza-block__title">{title}</h4>
-            <div className="pizza-block__selector">
+            <div onClick={handleClickOfType} className="pizza-block__selector">
                 <ul>
-                    <li className="active">{type}</li>
-                    <li>традиционное</li>
+                    <li className={typePizza.type === pizzaType.indexOf('Thin') && "active"}
+                        data-type='0'
+                    >
+                        {pizzaType[0]}</li>
+                    <li className={typePizza.type === pizzaType.indexOf('Traditional') && "active"}
+                        data-type='1'
+                    >{pizzaType[1]}</li>
                 </ul>
                 <ul>
-                    <li className="active">{size} sm.</li>
-                    <li>30 sm.</li>
-                    <li>40 sm.</li>
+                    {pizzaSize.map((size, index) => (
+                        <li 
+                            key={index}
+                            data-size={size} 
+                            className={typePizza.size === size && "active"}
+                            >
+                            {size} sm.</li>))
+                    }
                 </ul>
             </div>
             <div className="pizza-block__bottom">
