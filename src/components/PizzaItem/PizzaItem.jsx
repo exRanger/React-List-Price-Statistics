@@ -8,9 +8,7 @@ export default function PizzaItem({
 }) {
     const [count, setCount] = useState(0);
     const [typePizza, setTypePizza] = useState({type: 0, size: 30});
-    const handleCount = () => {
-        setCount(count + 1);
-    }
+    const handleCount = () => setCount(count + 1);
     const handleClickOfType = (e) => {
         let {
             type: chosenTypePizza = typePizza.type,
