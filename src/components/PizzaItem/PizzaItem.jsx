@@ -39,8 +39,9 @@ export default function PizzaItem({
                     >
                         {pizzaType[0]}</li>
                     <li className={typePizza.type === pizzaType.indexOf('Traditional') && "active"}
-                        data-type='1'
-                    >{pizzaType[1]}</li>
+                        data-type='1'>
+                        {pizzaType[1]}
+                    </li>
                 </ul>
                 <ul>
                     {pizzaSize.map((size, index) => (
@@ -48,7 +49,7 @@ export default function PizzaItem({
                             key={index}
                             data-size={size} 
                             className={typePizza.size === size && "active"}
-                            >
+                        >
                             {size} sm.</li>))
                     }
                 </ul>
