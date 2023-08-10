@@ -48,7 +48,7 @@ export default function PizzaItem({
                             key={index}
                             data-size={size} 
                             className={typePizza.size === size && "active"}
-                            >
+                        >
                             {size} sm.</li>))
                     }
                 </ul>
