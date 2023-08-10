@@ -68,7 +68,7 @@ export default function PizzaItem({
                         />
                     </svg>
                     <span>Add</span>
-                    <i >{count}</i>
+                    <i>{count}</i>
                 </button>
             </div>
         </div>
