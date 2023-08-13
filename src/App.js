@@ -7,7 +7,6 @@ import './scss/app.scss';
 function App() {
     return (
         <>
-            {/* <PriceBlock/> */}
             <div className="wrapper">
                 <Header />
                 <div className="content">
@@ -24,29 +23,6 @@ function App() {
                                 size={40}
                                 price="15"
                             />
-                            <PizzaItem
-                                title="vegetarian"
-                                type="thin"
-                                size={22}
-                                price="21"
-                            />
-                            <PizzaItem
-                                title="mexican"
-                                type="large"
-                                size={25}
-                                price="19"
-                            />
-                            <PizzaItem
-                                title="peperoni"
-                                type="large"
-                                size={35}
-                                price="24"
-                            />
-                            <PizzaItem />
-                            <PizzaItem />
-                            <PizzaItem />
-                            <PizzaItem />
-                            <PizzaItem />
                         </div>
                     </div>
                 </div>
