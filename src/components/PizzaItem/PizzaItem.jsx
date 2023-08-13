@@ -2,9 +2,7 @@ import {useState} from 'react';
 
 export default function PizzaItem({
     title = 'classic',
-    type = 'thin',
-    size = 26,
-    price = 20
+    type = 'thin'
 }) {
     const [count, setCount] = useState(0);
     const [typePizza, setTypePizza] = useState({type: 0, size: 30});
