@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 export default function Sort({}) {
     const [sort, setSort] = useState(
         {
@@ -11,7 +12,6 @@ export default function Sort({}) {
             chosenItem: e.target.dataset.sortId || sort.chosenItem
         };
         setSort(constSortKey);
-        console.log(e.target.dataset.sortId);
     }
     const popupItems = ['popularity', 'price', 'abc', 'rating'];
     return (
