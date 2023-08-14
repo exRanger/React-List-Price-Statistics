@@ -16,7 +16,7 @@ export default function PizzaItem({
             type: +chosenTypePizza,
             size: +chosenSizePizza
         });
-    }
+    };
     //TODO: convert to TS ENUM
     const pizzaType = ['Thin', 'Traditional'];
     const pizzaSize = [30,33,35];
