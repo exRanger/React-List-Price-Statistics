@@ -1,6 +1,12 @@
 import React from 'react'
 import {useState} from 'react';
 
+/**
+* RFC
+* @author Zagirov I.
+* @params props
+* return JSX
+*/
 export default function Categories({}) {
     const [category, setCategory] = useState(0)
     const setCategoryHandler = (e) => {
