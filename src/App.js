@@ -15,7 +15,7 @@ function App() {
                             <Categories />
                             <Sort />
                         </div>
-                        <h2 className="content__title">Все пиццы</h2>
+                        <h2 className="content__title">All our products</h2>
                         <div className="content__items">
                             <PizzaItem
                                 title="classic"
