@@ -1,8 +1,13 @@
 import {useState} from 'react';
 
 export default function PizzaItem({
-    title = 'classic',
-    type = 'thin'
+    imageSrc,
+    title,
+    types,
+    price,
+    category,
+    rating,
+    sizes
 }) {
     const [count, setCount] = useState(0);
     const [typePizza, setTypePizza] = useState({type: 0, size: 30});
@@ -19,13 +24,13 @@ export default function PizzaItem({
         });
     };
     //TODO: convert to TS ENUM
-    const pizzaType = ['Thin', 'Traditional'];
-    const pizzaSize = [30,33,35];
+    const pizzaType = ['Thin', 'Traditional', 'The Big Pizza'];
+    const pizzaSize = [30, 33, 35];
     return (
         <div className="pizza-block">
             <img
                 className="pizza-block__image"
-                src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                src={imageSrc}
                 alt="Pizza"
             />
             <h4 className="pizza-block__title">{title}</h4>
@@ -34,14 +39,15 @@ export default function PizzaItem({
                     <li className={typePizza.type === pizzaType.indexOf('Thin') && "active"}
                         data-type='0'
                     >
-                        {pizzaType[0]}</li>
+                        {pizzaType[0]}
+                    </li>
                     <li className={typePizza.type === pizzaType.indexOf('Traditional') && "active"}
                         data-type='1'>
                         {pizzaType[1]}
                     </li>
                 </ul>
                 <ul>
-                    {pizzaSize.map((size, index) => (
+                    {sizes.map((size, index) => (
                         <li 
                             key={index}
                             data-size={size} 
