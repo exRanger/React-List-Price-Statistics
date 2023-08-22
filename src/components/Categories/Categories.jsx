@@ -2,13 +2,16 @@ import React from 'react'
 import {useState} from 'react';
 
 /**
-* RFC
-* @author Zagirov I.
-* @params props
-* return JSX
-*/
+ * Component for showing categories
+ * @component
+ */
 export default function Categories({}) {
     const [category, setCategory] = useState(0)
+        
+    /**
+    * Event handler 
+    * @param {event} Event from input
+    */
     const setCategoryHandler = (e) => {
         const{activeId} = e.target.dataset;
         setCategory(Number(activeId));
