@@ -25,6 +25,7 @@ export default function PizzaItem({
     };
     //TODO: convert to TS ENUM
     const pizzaType = ['Thin', 'Traditional', 'The Big Pizza'];
+    // temporary unused
     const pizzaSize = [30, 33, 35];
     return (
         <div className="pizza-block">
