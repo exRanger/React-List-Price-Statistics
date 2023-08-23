@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import Categories from './components/Categories/Categories';
+import ContentLoader from './components/ContentLoader';
 import Header from './components/Header/Header';
 import PizzaItem from './components/PizzaItem/PizzaItem';
 import Sort from './components/Sort/Sort';
@@ -26,7 +27,7 @@ function App() {
                         </div>
                         <h2 className="content__title">All our products</h2>
                         <div className="content__items">             
-                            {pizzas.map((props, index) => <PizzaItem {...props} key={`el${index}}`}/>)}
+                            {pizzas.map((props, index) => <ContentLoader {...props} key={`el${index}}`}/>)}
                         </div>
                     </div>
                 </div>
