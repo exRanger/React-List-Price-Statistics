@@ -4,19 +4,19 @@ import {default as ReactContentLoader} from "react-content-loader";
 const ContentLoader = (props) => (
   <ReactContentLoader 
     speed={2}
-    width={260}
-    height={480}
-    viewBox="0 0 476 480"
+    width={280}
+    height={390}
+    viewBox="0 0 476 690"
     backgroundColor="#f3f3f3"
     foregroundColor="#24b9f9"
     {...props}
   >
-    <circle cx="153" cy="117" r="121" /> 
-    <rect x="33" y="257" rx="15" ry="15" width="247" height="30" /> 
-    <rect x="17" y="304" rx="15" ry="15" width="281" height="92" /> 
-    <rect x="21" y="429" rx="15" ry="15" width="91" height="38" /> 
-    <rect x="150" y="423" rx="16" ry="16" width="143" height="51" /> 
-    <rect x="75" y="434" rx="0" ry="0" width="0" height="6" />
+    <circle cx="190" cy="189" r="180" /> 
+    <rect x="52" y="383" rx="35" ry="15" width="281" height="30" /> 
+    <rect x="17" y="435" rx="15" ry="15" width="360" height="92" /> 
+    <rect x="21" y="549" rx="15" ry="15" width="100" height="50" /> 
+    <rect x="177" y="540" rx="16" ry="16" width="203" height="66" /> 
+    <rect x="75" y="499" rx="0" ry="0" width="0" height="6" />
   </ReactContentLoader>
 )
 
