@@ -14,7 +14,7 @@ function App() {
         (async () => {
             const pizzas = await Controller.load();
             setPizzas(pizzas);
-            setLoadOff(true)
+            setLoadOff(true);
         })();
     }, []);
     
