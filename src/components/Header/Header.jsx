@@ -5,7 +5,9 @@
  * @result JSX
  * @public
  */
-export default function Header({}) {
+export default function Header({
+    price = 0
+}) {
     return (
         <>
             <div className="header">
@@ -24,7 +26,7 @@ export default function Header({}) {
                     </div>
                     <div className="header__cart">
                         <a href="/cart.html" className="button button--cart">
-                            <span>$39</span>
+                            <span>{price}</span>
                             <div className="button__delimiter"></div>
                             <svg
                                 width="18"
