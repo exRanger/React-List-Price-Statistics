@@ -1,8 +1,8 @@
 /**
  * Header
- * @description React Functional Component
+ * @description React.FC
  * @param {IProps} props Props.
- * @result JSX
+ * @return <Header price={price} />
  * @public
  */
 export default function Header({
