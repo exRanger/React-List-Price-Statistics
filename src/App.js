@@ -2,7 +2,8 @@ import {
     RouterProvider,
     Route, 
     createBrowserRouter,
-    createRoutesFromElements
+    createRoutesFromElements,
+    Routes
 } from 'react-router-dom';
 import Header from './components/Header/Header';
 
@@ -13,19 +14,24 @@ import './scss/app.scss';
 function App() {
     const router = createBrowserRouter(
         createRoutesFromElements(
-            <Route path="/" element={<Home/>}>
-                <Route path="/card" element={<Card/>} />
-            </Route>
+                <Route>
+                    <Route path='/' index element={<Home/>} />
+                    <Route path="/card" element={<Card/>} />
+                </Route>
         )
     );
     return (
         <>
             <div className="wrapper">
-                <Header />
+                <Header/>
                 <RouterProvider {...{router}}/>
             </div>
         </>
     );
+}
+
+const Root = () => {
+    return <Header />
 }
 
 export default App;
