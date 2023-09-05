@@ -1,19 +1,21 @@
 /**
  * Header
- * @description React Functional Component
+ * @description React.FC
  * @param {IProps} props Props.
- * @result JSX
+ * @return <Header price={price} />
  * @public
  */
-export default function Header({}) {
+export default function Header({
+    price = 0
+}) {
     return (
         <>
             <div className="header">
                 <div className="container">
                     <div className="header__logo">
                         <img
-                            width="80"
-                            height={100}
+                            width="72"
+                            height={89}
                             src="img/dear-pizza-logo.svg"
                             alt="Pizza logo"
                         />
@@ -24,19 +26,19 @@ export default function Header({}) {
                     </div>
                     <div className="header__cart">
                         <a href="/cart.html" className="button button--cart">
-                            <span>$39</span>
+                            <span>{price}</span>
                             <div className="button__delimiter"></div>
                             <svg
-                                width="18"
-                                height="18"
-                                viewBox="0 0 18 18"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 20 22"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
                                     d="M6.33333 16.3333C7.06971 16.3333 7.66667 15.7364 7.66667 15C7.66667 14.2636 7.06971 13.6667 6.33333 13.6667C5.59695 13.6667 5 14.2636 5 15C5 15.7364 5.59695 16.3333 6.33333 16.3333Z"
                                     stroke="white"
-                                    strokeWidth="1.8"
+                                    strokeWidth="1.62"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                 />
