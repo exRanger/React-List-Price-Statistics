@@ -16,7 +16,7 @@ import './scss/app.scss';
 
 function App() {
     const router = createBrowserRouter(
-        createRoutesFromElements( 
+        createRoutesFromElements(
             <Route element={<Root/>}>
                 <Route path='/' index element={<Home/>} />
                 <Route path="/card" element={<Card/>} />
@@ -40,4 +40,5 @@ const Root = () => <>
         <Outlet/> 
     </div>
 </>
+
 export default App;

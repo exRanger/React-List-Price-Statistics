@@ -28,8 +28,7 @@ export default function Header({
                         </div>
                     </Link>
                     <Link to='/card'>
-                        <div className="header__cart">
-                            <a href="/cart.html" className="button button--cart">
+                        <div className="header__cart button button--cart">
                                 <span>{price}</span>
                                 <div className="button__delimiter"></div>
                                 <svg
@@ -62,7 +61,6 @@ export default function Header({
                                     />
                                 </svg>
                                 <span>3</span>
-                            </a>
                         </div>
                     </Link>
                 </div>
