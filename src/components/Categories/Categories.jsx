@@ -6,14 +6,14 @@ import {useState} from 'react';
  * @component
  */
 export default function Categories({}) {
-    const [category, setCategory] = useState(0)
+    const [category, setCategory] = useState(0);
         
     /**
     * Event handler 
     * @param {event} Event from input
     */
     const setCategoryHandler = (e) => {
-        const{activeId} = e.target.dataset;
+        const {activeId} = e.target.dataset;
         setCategory(Number(activeId));
     }
     const pizzaType = ['All', 'Cheese', 'SeaFish', 'Hot', 'Vegan', 'Chicken'];
