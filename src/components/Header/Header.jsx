@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { useState } from 'react';
 /**
  * Header
  * @description React.FC
@@ -9,6 +10,7 @@ import { Link } from "react-router-dom"
 export default function Header({
     price = 0
 }) {
+    const [count, setCount] = useState(3);
     return (
         <>
             <div className="header">
@@ -28,8 +30,7 @@ export default function Header({
                         </div>
                     </Link>
                     <Link to='/card'>
-                        <div className="header__cart">
-                            <a href="/cart.html" className="button button--cart">
+                        <div className="header__cart button button--cart">
                                 <span>{price}</span>
                                 <div className="button__delimiter"></div>
                                 <svg
@@ -61,8 +62,7 @@ export default function Header({
                                         strokeLinejoin="round"
                                     />
                                 </svg>
-                                <span>3</span>
-                            </a>
+                                <span>{count}</span>
                         </div>
                     </Link>
                 </div>
