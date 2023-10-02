@@ -8,15 +8,7 @@ export default class Controller {
         }
         this.uri = uri;
     }
-
-    // get uriPizza() {
-    //     return this.uri;
-    // }
-
-    // set uriPizza(uri) {
-    //     this.uri = uri;
-    // }
-
+    
     static  loadCategories = async (uri, /* rejectCategory, countOf */) => {
         if (!uri) {
             return;
