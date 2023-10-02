@@ -17,16 +17,16 @@ function App() {
     const router = createBrowserRouter(
         createRoutesFromElements(
             <Route element={<Root/>}>
-                <Route path='/' index element={<Home/>} />
-                <Route path="/card" element={<Card/>} />
-                <Route path="*" element={<EmptyPage/>} />
+                <Route path='/' index element={<Home/>}/>
+                <Route path="/card" element={<Card/>}/>
+                <Route path="*" element={<EmptyPage/>}/>
             </Route>
         )
     );
     return (
         <>
             <div className="wrapper">
-                <RouterProvider {...{router}} />
+                <RouterProvider {...{router}}/>
             </div>
         </>
     );
