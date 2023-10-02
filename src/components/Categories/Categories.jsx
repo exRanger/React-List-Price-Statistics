@@ -1,5 +1,4 @@
-import React from 'react'
-import {useState} from 'react';
+import {React, useState} from 'react';
 
 /**
  * Component for showing categories
@@ -7,7 +6,7 @@ import {useState} from 'react';
  */
 export default function Categories({}) {
     const [category, setCategory] = useState(0);
-        
+    
     /**
     * Event handler 
     * @param {event} Event from input
