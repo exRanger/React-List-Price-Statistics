@@ -67,7 +67,7 @@ export default function Sort({}) {
                     {sort.chosenItem && <CloseButton onClick={clearHandleClick} />}
                 </span>
             </div>
-            { sort.isSortClicked && 
+            {sort.isSortClicked && 
                 <div className="sort__popup">
                     <ul>
                         {popupItems.map((item, index) => (
