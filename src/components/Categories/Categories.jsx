@@ -14,7 +14,7 @@ export default function Categories({}) {
     const setCategoryHandler = (e) => {
         const {activeId} = e.target.dataset;
         setCategory(Number(activeId));
-    }
+    };
     const pizzaType = ['All', 'Cheese', 'SeaFish', 'Hot', 'Vegan', 'Chicken'];
     return (
         <div onClick={setCategoryHandler} className="categories">
