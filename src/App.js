@@ -3,14 +3,10 @@ import {
     Route, 
     createBrowserRouter,
     createRoutesFromElements,
-    Routes,
-    Link,
     Outlet
 } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Card from './pages/Card';
-import EmptyPage from './pages/EmpyPage';
-import Home from './pages/Home';
+import {Card, Home, EmptyPage} from './pages';
 import './scss/app.scss';
 
 function App() {
