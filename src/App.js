@@ -26,7 +26,7 @@ function App() {
     return (
         <>
             <div className="wrapper">
-                <RouterProvider {...{router}}/>
+                <RouterProvider router={router}/>
             </div>
         </>
     );
