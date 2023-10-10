@@ -64,7 +64,7 @@ export default function Sort({}) {
                 <b>{ sort.chosenItem ? 'Sorted by:' : 'Sort pizzas' }</b>
                 <span>
                     {popupItems[sort.chosenItem]}
-                    {sort.chosenItem && <CloseButton onClick={clearHandleClick} title='close/>}
+                    {sort.chosenItem && <CloseButton onClick={clearHandleClick} title='close'/>}
                 </span>
             </div>
             {sort.isSortClicked && 
