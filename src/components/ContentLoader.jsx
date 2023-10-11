@@ -1,10 +1,13 @@
 import React from "react";
 import {default as ReactContentLoader} from "react-content-loader";
 
+
+const LOADER_WIDTH_SIZE = 256;
+
 const ContentLoader = (props) => (
    <ReactContentLoader 
        speed={2}
-       width={280}
+       width={LOADER_WIDTH_SIZE}
        height={390}
        viewBox="0 0 476 690"
        backgroundColor="#f3f3f3"
