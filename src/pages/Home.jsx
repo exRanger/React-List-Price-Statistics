@@ -19,13 +19,13 @@ export default function Home() {
     }, []);  
     return (
         <div className="content">
-            <div className="container">
-                <div className="content__top">
+            <div className="contentContainer">
+                <div className="contentContainer__top">
                     <Categories />
                     <Sort />
                 </div>
-                <h2 className="content__title">All our products</h2>
-                    <div className="content__items">
+                <h2 className="contentContainer__title">All our products</h2>
+                    <div className="contentContainer__items">
                         {loadOff ? 
                             pizzas.map((props, index) => <PizzaItem {...props} key={`el${index}}`}/>) :
                             <Loader countOfLoad={6}/>
