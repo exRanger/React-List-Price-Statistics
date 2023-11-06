@@ -2,16 +2,18 @@
 
 .header {
     border-bottom: 1px solid $gray-line;
-    padding: 40px 70px 0;
+    padding: 40px 21px 0;
 
     .container {
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
 
     &__logo {
         display: flex;
         align-items: center;
+        min-width: 243px;
 
         img {
             margin-right: 15px;

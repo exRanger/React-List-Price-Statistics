@@ -3,8 +3,20 @@
 .categories {
     ul {
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
 
         li {
+
+            @media (max-width: 1024) {
+                justify-content: center;
+                margin-top: 30px;
+                flex-shrink: 2;
+                flex-direction: column;
+                width: 100px;
+            }
+
             background-color: #f9f9f9;
             padding: 13px 30px;
             border-radius: 30px;
