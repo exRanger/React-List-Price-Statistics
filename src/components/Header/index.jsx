@@ -18,7 +18,7 @@ export default function Header({
                             <img
                                 width="72"
                                 height={89}
-                                src="img/dear-pizza-logo.svg"
+                                src="assets/img/dear-pizza-logo.svg"
                                 alt="Pizza logo"
                             />
                             <div className='header__logoText'>

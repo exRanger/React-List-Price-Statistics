@@ -5,7 +5,7 @@ import {
     createRoutesFromElements,
     Outlet
 } from 'react-router-dom';
-import Header from './components/Header/Header';
+import Header from './components/Header';
 import {Card, Home, EmptyPage} from './pages';
 import './scss/app.scss';
 
