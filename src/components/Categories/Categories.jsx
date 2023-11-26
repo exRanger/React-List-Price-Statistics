@@ -4,23 +4,20 @@ import {React, useState} from 'react';
  * Component for showing categories
  * @component
  */
-export default function Categories({}) {
+export default function Categories({value, setCategoryHandler}) {
     const [category, setCategory] = useState(0);
     
     /**
     * Event handler 
     * @param {event} Event from input
     */
-    const setCategoryHandler = (e) => {
-        const {activeId} = e.target.dataset;
-        setCategory(Number(activeId));
-    };
+  
     const pizzaType = ['All', 'Cheese', 'SeaFish', 'Hot', 'Vegan', 'Chicken'];
     return (
-        <div onClick={setCategoryHandler} className="categories">
+        <div onClick={(e) => setCategoryHandler(e)} className="categories">
             <ul>
                 {pizzaType.map((item, index) => {
-                    return <li className={(index === category) && 'active'} data-active-id={index}>{item}</li>
+                    return <li className={(value === index) && 'active'} data-active-id={index} key={index}>{item}</li>
                 })}
             </ul>
         </div>

@@ -1,5 +1,5 @@
 export default class Controller {
-    static _defaultEndpoint = 'https://64e4886bc5556380291360e3.mockapi.io/Items';
+    static _defaultEndpoint = 'https://64e4886bc5556380291360e3.mockapi.io/';
     static _defaultTestEndpoint = 'https://64e4886bc5556380291360e3.mockapi.io/Items';
     
     constructor(uri = _defaultTestEndpoint){
@@ -16,8 +16,12 @@ export default class Controller {
         return await this.load(uri);
     }
 
-    static load = async (uri = this._defaultTestEndpoint) => {
-        const res = await fetch(uri);
+    static load = async  (param) => {
+        const url = uri;
+        if (param) {
+            url = uri + param 
+        }
+        const res = await fetch(url);
         const data = await res.json();
         return data;
     }

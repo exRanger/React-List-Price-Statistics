@@ -10,18 +10,29 @@ import '../scss/app.scss';
 export default function Home() {
     const [pizzas, setPizzas] = useState([]);
     const [loadOff , setLoadOff] = useState(false);
+    const [categoryId, setCategoryId] = useState(0);
+    const [sortType, setSortType] = useState(0);
+
+    const setCategoryHandler = (e) => {
+        
+        const {activeId} = e.target.dataset;
+        console.log(activeId)
+        setCategoryId(Number(activeId));
+    };
+    
     useEffect(() => {(
         async () => {
-            const pizzas = await Controller.load();
+            const pizzas = await Controller.load(`?category=${categoryId}`);
             setPizzas(pizzas);
             setLoadOff(true);
         })();
     }, []);  
+
     return (
         <div className="content">
             <div className="contentContainer">
                 <div className="contentContainer__top">
-                    <Categories />
+                    <Categories value={categoryId} setCategoryHandler={setCategoryHandler}/>
                     <Sort />
                 </div>
                 <h2 className="contentContainer__title">All our products</h2>
