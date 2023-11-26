@@ -17,7 +17,7 @@ export default class Controller {
     }
 
     static load = async  (param) => {
-        const url = uri;
+        let url = uri;
         if (param) {
             url = uri + param 
         }
