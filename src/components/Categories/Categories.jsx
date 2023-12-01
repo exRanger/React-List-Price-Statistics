@@ -7,7 +7,6 @@ import {useState} from 'react';
  */
 export default function Categories({}) {
     const [category, setCategory] = useState(0)
-        
     /**
     * Event handler 
     * @param {event} Event from input
