@@ -6,7 +6,6 @@ import {
     Routes
 } from 'react-router-dom';
 import Header from './components/Header/Header';
-
 import Card from './pages/Card';
 import Home from './pages/Home';
 import './scss/app.scss';
@@ -31,7 +30,7 @@ function App() {
 }
 
 const Root = () => {
-    return <Header />
+    return <Header />;
 }
 
 export default App;
