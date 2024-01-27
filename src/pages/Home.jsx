@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useLayoutEffect} from 'react';
 import Controller from '../getDataApi/apiController';
 import Categories from '../components/Categories/Categories';
 import PizzaItem from '../components/PizzaItem/PizzaItem';
@@ -7,33 +7,39 @@ import Loader from '../components/Loader';
 
 import '../scss/app.scss';
 
+const CATEGORY_SEARCH_PARAM = 'category';
+const SORTING_SEARCH_PARAM = 'sorting';
+
 export default function Home() {
     const [pizzas, setPizzas] = useState([]);
     const [loadOff , setLoadOff] = useState(false);
-    const [categoryId, setCategoryId] = useState(0);
-    const [sortType, setSortType] = useState(0);
+    const [categoryId, setCategoryId] = useState(null);
+    const [sort, setSort] = useState({
+        isSortClicked: false,
+        chosenItem: false
+    });
 
     const setCategoryHandler = (e) => {
-        
         const {activeId} = e.target.dataset;
-        console.log(activeId)
-        setCategoryId(Number(activeId));
+        setCategoryId(activeId ?? null);
     };
     
     useEffect(() => {(
         async () => {
-            const pizzas = await Controller.load(`?category=${categoryId}`);
+            const categoryIdState = categoryId !== null ? `?${CATEGORY_SEARCH_PARAM}=${categoryId}` : null;
+            const pizzas = await Controller.load(categoryIdState);
             setPizzas(pizzas);
+            console.log(pizzas)
             setLoadOff(true);
         })();
-    }, []);  
+    }, [categoryId]);  
 
     return (
         <div className="content">
             <div className="contentContainer">
                 <div className="contentContainer__top">
                     <Categories value={categoryId} setCategoryHandler={setCategoryHandler}/>
-                    <Sort />
+                    <Sort sort={sort} setSort={setSort} />
                 </div>
                 <h2 className="contentContainer__title">All our products</h2>
                     <div className="contentContainer__items">

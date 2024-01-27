@@ -7,7 +7,7 @@ export default function PizzaItem({
     price = 123,
     category,
     rating,
-    sizes
+    sizes = []
 }) {
     const [count, setCount] = useState(0);
     const [typePizza, setTypePizza] = useState({type: 0, size: 30});

@@ -22,11 +22,7 @@ const CloseButton = (props) => (
     </button>
 );
 
-export default function Sort({}) {
-    const [sort, setSort] = useState({
-        isSortClicked: false,
-        chosenItem: false
-    });
+export default function Sort({sort, setSort}) {
     const sortHandleClick = (e) => {
         let constSortKey = {
             isSortClicked: !sort.isSortClicked,

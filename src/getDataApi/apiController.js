@@ -9,19 +9,19 @@ export default class Controller {
         this.uri = uri;
     }
     
-    static  loadCategories = async (uri, /* rejectCategory, countOf */) => {
+    static loadCategories = async (uri, /* rejectCategory, countOf */) => {
         if (!uri) {
             return;
         }
         return await this.load(uri);
     }
 
-    static load = async  (param) => {
-        let url = uri;
+    static load = async (param) => {
+        let uri = this.uri || this._defaultTestEndpoint;
         if (param) {
-            url = uri + param 
+            uri = uri + param 
         }
-        const res = await fetch(url);
+        const res = await fetch(uri);
         const data = await res.json();
         return data;
     }
