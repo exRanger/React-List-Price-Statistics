@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom"
+import {Link} from "react-router-dom";
+
 /**
  * Header
  * @description React.FC
@@ -6,9 +7,7 @@ import { Link } from "react-router-dom"
  * @return <Header price={price} />
  * @public
  */
-export default function Header({
-    price = 0
-}) {
+export default function Header({price = 0}) {
     return (
         <>
             <div className="header">
