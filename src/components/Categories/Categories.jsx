@@ -1,5 +1,6 @@
-import {React, useState} from 'react';
+import React, {useState} from 'react';
 
+const DEFAULT_PIZZA_TYPE = 'All';
 /**
  * Component for showing categories
  * @component
@@ -12,14 +13,19 @@ export default function Categories({value, setCategoryHandler}) {
     * @param {event} Event from input
     */
   
-    const pizzaType = ['All', 'Cheese', 'SeaFish', 'Hot', 'Vegan', 'Chicken'];
+    const pizzaType = ['Cheese', 'SeaFish', 'Hot', 'Vegan', 'Chicken'];
     return (
         <div onClick={(e) => setCategoryHandler(e)} className="categories">
             <ul>
+                <CategoriesPizzaItem index={null} value={value} item={DEFAULT_PIZZA_TYPE}/>
                 {pizzaType.map((item, index) => {
-                    return <li className={(value === index) && 'active'} data-active-id={index} key={index}>{item}</li>
+                    return <CategoriesPizzaItem value={value} index={index} item={item}/>
                 })}
             </ul>
         </div>
     );
+}
+
+function CategoriesPizzaItem({item, value = null, index = null}) {
+    return <li className={(value == index) && 'active'} data-active-id={index} key={index}>{item}</li>
 }
