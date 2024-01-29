@@ -59,7 +59,7 @@ export default function Sort({sort, setSort}) {
                         
                     />
                 </svg>
-                <b>{ sort.chosenItem ? 'Sorted by:' : 'Sort pizzas' }</b>
+                <b>{sort.chosenItem ? 'Sorted by:' : 'Sort pizzas' }</b>
                 <span>
                     {popupItems[sort.chosenItem]}
                     {sort.chosenItem && <CloseButton onClick={clearHandleClick} title='close'/>}
