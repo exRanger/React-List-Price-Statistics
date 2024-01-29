@@ -21,7 +21,7 @@ export default class Controller {
         if (category) {
             uri = uri + category;
         }
-        if(filtering) {
+        if (filtering) {
             uri = uri + filtering;
         }
         const res = await fetch(uri);
