@@ -8,7 +8,7 @@ import Loader from '../components/Loader';
 import '../scss/app.scss';
 
 const CATEGORY_SEARCH_PARAM = 'category';
-const SORTING_SEARCH_PARAM = 'sorting';
+const SORTING_SEARCH_PARAM = 'sortBy';
 
 export default function Home() {
     const [pizzas, setPizzas] = useState([]);
@@ -16,7 +16,8 @@ export default function Home() {
     const [categoryId, setCategoryId] = useState(null);
     const [sort, setSort] = useState({
         isSortClicked: false,
-        chosenItem: false
+        chosenItem: false,
+        sortItemName: null
     });
 
     const setCategoryHandler = (e) => {
@@ -27,12 +28,15 @@ export default function Home() {
     useEffect(() => {(
         async () => {
             const categoryIdState = categoryId !== null ? `?${CATEGORY_SEARCH_PARAM}=${categoryId}` : null;
-            const pizzas = await Controller.load(categoryIdState);
+            const sortValueState = sort.sortItemName !== null ? `${categoryIdState ? '&' : '?'}${SORTING_SEARCH_PARAM}=${sort.sortItemName}` : null;
+            console.log(sort);
+            setLoadOff(false);
+            const pizzas = await Controller.load(categoryIdState, sortValueState);
             setPizzas(pizzas);
             console.log(pizzas)
             setLoadOff(true);
         })();
-    }, [categoryId]);  
+    }, [categoryId, sort.sortItemName]);  
 
     return (
         <div className="content">
