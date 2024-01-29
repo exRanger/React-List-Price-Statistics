@@ -29,7 +29,6 @@ export default function Home() {
         async () => {
             const categoryIdState = categoryId !== null ? `?${CATEGORY_SEARCH_PARAM}=${categoryId}` : null;
             const sortValueState = sort.sortItemName !== null ? `${categoryIdState ? '&' : '?'}${SORTING_SEARCH_PARAM}=${sort.sortItemName}` : null;
-            console.log(sort);
             setLoadOff(false);
             const pizzas = await Controller.load(categoryIdState, sortValueState);
             setPizzas(pizzas);
