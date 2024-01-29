@@ -33,7 +33,6 @@ export default function Home() {
             setLoadOff(false);
             const pizzas = await Controller.load(categoryIdState, sortValueState);
             setPizzas(pizzas);
-            console.log(pizzas)
             setLoadOff(true);
         })();
     }, [categoryId, sort.sortItemName]);  
