@@ -16,10 +16,13 @@ export default class Controller {
         return await this.load(uri);
     }
 
-    static load = async (param) => {
+    static load = async (category, filtering) => {
         let uri = this.uri || this._defaultTestEndpoint;
-        if (param) {
-            uri = uri + param 
+        if (category) {
+            uri = uri + category;
+        }
+        if(filtering) {
+            uri = uri + filtering;
         }
         const res = await fetch(uri);
         const data = await res.json();

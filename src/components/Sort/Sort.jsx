@@ -24,10 +24,14 @@ const CloseButton = (props) => (
 
 export default function Sort({sort, setSort}) {
     const sortHandleClick = (e) => {
+        console.log('sort.chosenItem', sort.chosenItem)
+        console.log('popupItems[sort.chosenItem]', popupItems[sort.chosenItem])
         let constSortKey = {
             isSortClicked: !sort.isSortClicked,
-            chosenItem: e.target.dataset.sortId || sort.chosenItem
+            chosenItem: e.target.dataset.sortId ?? sort.chosenItem,
+            sortItemName: popupItems[e.target.dataset.sortId] || popupItems[sort.chosenItem] || null
         };
+        console.log('popupItems[e.target.dataset.sortId]', popupItems[e.target.dataset.sortId])
         setSort(constSortKey);
     }
     const clearHandleClick = (e) => {
@@ -35,11 +39,12 @@ export default function Sort({sort, setSort}) {
         setSort(
             {
                 ...sort,
-                chosenItem: false
+                chosenItem: null,
+                sortItemName: null
             }
         );
     }
-    const popupItems = ['popularity', 'price', 'abc', 'rating'];
+    const popupItems = ['popularity', 'price', 'title', 'rating'];
     return (
         <div onClick={sortHandleClick} className="sort">
             <div className="sort__label">
