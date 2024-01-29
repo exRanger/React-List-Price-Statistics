@@ -31,7 +31,6 @@ export default function Sort({sort, setSort}) {
             chosenItem: e.target.dataset.sortId ?? sort.chosenItem,
             sortItemName: popupItems[e.target.dataset.sortId] || popupItems[sort.chosenItem] || null
         };
-        console.log('popupItems[e.target.dataset.sortId]', popupItems[e.target.dataset.sortId])
         setSort(constSortKey);
     }
     const clearHandleClick = (e) => {
