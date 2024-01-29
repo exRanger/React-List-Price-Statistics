@@ -24,7 +24,6 @@ const CloseButton = (props) => (
 
 export default function Sort({sort, setSort}) {
     const sortHandleClick = (e) => {
-        console.log('sort.chosenItem', sort.chosenItem)
         console.log('popupItems[sort.chosenItem]', popupItems[sort.chosenItem])
         let constSortKey = {
             isSortClicked: !sort.isSortClicked,
