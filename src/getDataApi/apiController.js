@@ -1,5 +1,4 @@
 export default class Controller {
-    static _defaultEndpoint = 'https://64e4886bc5556380291360e3.mockapi.io/';
     static _defaultTestEndpoint = 'https://64e4886bc5556380291360e3.mockapi.io/Items';
 
     constructor(uri = _defaultTestEndpoint){
