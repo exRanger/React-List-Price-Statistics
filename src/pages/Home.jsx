@@ -24,7 +24,7 @@ export default function Home() {
         const {activeId} = e.target.dataset;
         setCategoryId(activeId ?? null);
     };
-    
+
     useEffect(() => {(
         async () => {
             const categoryIdState = categoryId !== null ? `?${CATEGORY_SEARCH_PARAM}=${categoryId}` : null;
