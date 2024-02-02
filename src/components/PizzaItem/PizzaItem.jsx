@@ -17,16 +17,12 @@ export default function PizzaItem({
             type: chosenTypePizza = typePizza.type,
             size: chosenSizePizza = typePizza.size
         } = e.target.dataset;
-        // These are both lowercase types, you need to convert them to a numeric type
         setTypePizza({
             type: +chosenTypePizza,
             size: +chosenSizePizza
         });
     };
-
-    //TODO: convert to TS ENUM
     const pizzaType = ['Thin', 'Traditional', 'The Big Pizza'];
-    // temporary unused
     const pizzaSize = [30, 33, 35];
     return (
         <div className="pizza-block-wrapper">
