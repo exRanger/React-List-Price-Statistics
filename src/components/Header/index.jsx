@@ -1,5 +1,7 @@
 import {Link} from "react-router-dom";
 
+const DEFAULT_PRICE = 0;
+
 /**
  * Header
  * @description React.FC
@@ -8,7 +10,7 @@ import {Link} from "react-router-dom";
  * @public
  * @author github.com/exRanger
  */
-export default function Header({price = 0}) {
+export default function Header({price = DEFAULT_PRICE}) {
     return (
         <>
             <div className="header">
