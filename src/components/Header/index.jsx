@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
  * @param {IProps} props Props.
  * @return <Header price={price} />
  * @public
+ * @author github.com/exRanger
  */
 export default function Header({price = 0}) {
     return (
