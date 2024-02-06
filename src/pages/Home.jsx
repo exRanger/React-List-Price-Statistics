@@ -7,6 +7,7 @@ import Loader from '../components/Loader';
 
 import '../scss/app.scss';
 
+// to consts
 const CATEGORY_SEARCH_PARAM = 'category';
 const SORTING_SEARCH_PARAM = 'sortBy';
 
