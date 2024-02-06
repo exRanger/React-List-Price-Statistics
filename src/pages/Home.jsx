@@ -34,7 +34,7 @@ export default function Home() {
             setPizzas(pizzas);
             setLoadOff(true);
         })();
-    }, [categoryId, sort.sortItemName]);  
+    }, [categoryId, sort.sortItemName]);
 
     return (
         <div className="content">
