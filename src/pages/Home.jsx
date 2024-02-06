@@ -45,7 +45,7 @@ export default function Home() {
                 </div>
                 <h2 className="contentContainer__title">All our products</h2>
                     <div className="contentContainer__items">
-                        {loadOff ? 
+                        {loadOff ?
                             pizzas.map((props, index) => <PizzaItem {...props} key={`el${index}}`}/>) :
                             <Loader countOfLoad={6}/>
                         }
