@@ -4,12 +4,7 @@ const DEFAULT_PIZZA_TYPE = 'All';
 
 export default function Categories({value, setCategoryHandler}) {
     const [category, setCategory] = useState(0);
-    
-    /**
-    * Event handler 
-    * @param {event} Event from input
-    */
-  
+
     const pizzaType = ['Cheese', 'SeaFish', 'Hot', 'Vegan', 'Chicken'];
     return (
         <div onClick={(e) => setCategoryHandler(e)} className="categories">
