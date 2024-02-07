@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
 
 const DEFAULT_PIZZA_TYPE = 'All';
-/**
- * Component for showing categories
- * @component
- */
+
 export default function Categories({value, setCategoryHandler}) {
     const [category, setCategory] = useState(0);
     
