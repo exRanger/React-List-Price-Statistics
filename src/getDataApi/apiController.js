@@ -7,7 +7,7 @@ export default class Controller {
         }
         this.uri = uri;
     }
-    
+
     static loadCategories = async (uri, /* rejectCategory, countOf */) => {
         if (!uri) {
             return;
