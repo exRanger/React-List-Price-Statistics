@@ -35,12 +35,12 @@ export default function PizzaItem({
                 <h4 className="pizza-block__title">{title}</h4>
                 <div onClick={handleClickOfType} className="pizza-block__selector">
                     <ul>
-                        <li className={typePizza.type === pizzaType.indexOf('Thin') && "active"}
+                        <li className={typePizza.type === pizzaType.indexOf('Thin') ? "active" : ''}
                             data-type='0'
                         >
                             {pizzaType[0]}
                         </li>
-                        <li className={typePizza.type === pizzaType.indexOf('Traditional') && "active"}
+                        <li className={typePizza.type === pizzaType.indexOf('Traditional') ? "active" : ''}
                             data-type='1'>
                             {pizzaType[1]}
                         </li>

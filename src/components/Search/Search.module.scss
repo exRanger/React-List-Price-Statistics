@@ -1,0 +1,39 @@
+.root {
+    position: relative;
+    left: -145px;
+}
+
+.input {
+    border: 1px solid rgba(0, 0, 0.12);
+    padding: 8px 32px;
+    width: 320px;
+    border-radius: 10px;
+    transition: all 0.15s ease-in-out;
+    &:focus {
+        opacity: 0.5;
+        border: 1px solid rgba(0, 0, 0.5);
+    }
+}
+
+.clearButton {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    opacity: 0.3;
+    right: 9px;
+    top: 9px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.searchLogo {
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+    position: absolute;
+    top: 7px;
+    left: 5px;
+}

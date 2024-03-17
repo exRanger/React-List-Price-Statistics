@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import Search from "../Search/Index";
 
 const DEFAULT_PRICE = 0;
 
@@ -10,7 +11,8 @@ const DEFAULT_PRICE = 0;
  * @public
  * @author github.com/exRanger
  */
-export default function Header({price = DEFAULT_PRICE}) {
+export default function Header({price = DEFAULT_PRICE, searchValue,
+    setSearchValue}) {
     return (
         <>
             <div className="header">
@@ -29,6 +31,7 @@ export default function Header({price = DEFAULT_PRICE}) {
                             </div>
                         </div>
                     </Link>
+                    <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
                     <Link to='/card'>
                         <div className="header__cart button button--cart">
                                 <span>{price}</span>
