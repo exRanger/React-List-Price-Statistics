@@ -13,7 +13,7 @@ const CATEGORY_SEARCH_PARAM = 'category';
 const SORTING_SEARCH_PARAM = 'sortBy';
 const SEARCH_PARAM = 'search'
 const PAGE_COUNT_PARAM = 'page'
-const LIMIT = 'limit=4'
+const LIMIT = 'limit=4';
 
 export default function Home({searchValue}) {
     const [pizzas, setPizzas] = useState([]);
