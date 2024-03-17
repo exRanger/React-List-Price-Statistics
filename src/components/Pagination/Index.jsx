@@ -3,13 +3,13 @@ import ReactPaginate from 'react-paginate';
  
 import './Pagination.scss';
 
-const Pagination = () => {
+const Pagination = ({setPage}) => {
     return <ReactPaginate
         className="CustomPagination"
         breakLabel="..."
         nextLabel=">"
-        onPageChange={() => {}}
-        pageRangeDisplayed={5}
+        onPageChange={(selection) => {setPage(selection.selected + 1)}}
+        pageRangeDisplayed={4}
         pageCount={3}
         previousLabel="<"
         renderOnZeroPageCount={null}

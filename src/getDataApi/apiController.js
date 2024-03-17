@@ -18,7 +18,7 @@ export default class Controller {
         return await this.load(uri);
     }
 
-    static load = async (category, filtering, searching) => {
+    static load = async (category, filtering, searching, page) => {
         let uri = this.uri || _defaultTestEndpoint;
         if (category) {
             uri = uri + category;
@@ -28,6 +28,9 @@ export default class Controller {
         }
         if (searching) {
             uri = uri + searching;
+        }
+        if (page) {
+            uri = uri + page;
         }
         const res = await fetch(uri);
         const data = await res.json();
