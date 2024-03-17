@@ -13,7 +13,7 @@ const Pagination = ({setPage}) => {
         pageCount={3}
         previousLabel="<"
         renderOnZeroPageCount={null}
-    />
+    />;
 };
 
 export default Pagination;
