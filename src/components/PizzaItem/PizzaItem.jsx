@@ -3,7 +3,6 @@ import {useState} from 'react';
 export default function PizzaItem({
     imageSrc,
     title,
-    /*types,*/
     price = 123,
     category,
     rating,
