@@ -21,7 +21,7 @@ export default function Header({price = DEFAULT_PRICE, searchValue,
                         <div className="header__logo">
                             <img
                                 width="72"
-                                height={89}
+                                height="89"
                                 src="assets/img/dear-pizza-logo.svg"
                                 alt="Pizza logo"
                             />
