@@ -40,7 +40,7 @@ export default function Sort({sort, setSort}) {
                 sortItemName: null
             }
         );
-    }
+    };
     const popupItems = ['popularity', 'price', 'title', 'rating'];
     return (
         <div onClick={sortHandleClick} className="sort">
