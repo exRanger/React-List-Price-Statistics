@@ -30,7 +30,7 @@ export default function Sort({sort, setSort}) {
             sortItemName: popupItems[e.target.dataset.sortId] || popupItems[sort.chosenItem] || null
         };
         setSort(constSortKey);
-    }
+    };
     const clearHandleClick = (e) => {
         e.stopPropagation();
         setSort(
