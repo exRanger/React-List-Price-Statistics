@@ -45,7 +45,6 @@ export default function Home({searchValue}) {
             setLoadOff(true);
         })();
     }, [categoryId, sort.sortItemName, searchValue, page]);
-
     const mappedData = Array.isArray(pizzas) && pizzas.filter((item) => item.title.toLowerCase().includes(searchValue.toLowerCase())).map((props, index) => <PizzaItem {...props} key={`el${index}}`}/>) 
 
     return (
