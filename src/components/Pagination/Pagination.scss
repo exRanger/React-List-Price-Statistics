@@ -1,8 +1,36 @@
 .CustomPagination > li { 
     border: 1px solid #fa8e00;
     display: inline-flex;
+    line-height: 40px;
+    text-align: center;
     border-radius: 3px;
     width: 40px;
     height: 40px;
     padding: 10;
+
+    & >  a {
+            display: block;
+            height: 100%;
+            width: 100%;
+        &:hover {
+            cursor: pointer;
+            background: #ffae45;
+        }
+    }
+
+}
+
+.CustomPagination {
+    display: flex;
+    justify-content: center;
+    & > .selected {
+        background: #ffae45;
+    }
+    & > .disabled {
+        background: #a0a0a0;
+        &:hover {
+            background: none !important;
+            cursor: not-allowed !important;
+        }
+    }
 }
