@@ -19,5 +19,5 @@ export default function Categories({value, setCategoryHandler}) {
 }
 
 function CategoriesPizzaItem({item, value = null, index = null}) {
-    return <li className={(value === index) ? 'active' : ''} data-active-id={index} key={index}>{item}</li>
+    return <li className={(value === index) ? 'active' : ''} data-active-id={index} key={index}>{item}</li>;
 }
