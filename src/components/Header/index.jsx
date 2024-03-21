@@ -7,7 +7,7 @@ const DEFAULT_PRICE = 0;
  * Header
  * @description React.FC
  * @param {IProps} props Props.
- * @return <Header price={price} />
+ * @return JSX
  * @public
  * @author github.com/exRanger
  */
