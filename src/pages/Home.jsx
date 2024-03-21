@@ -25,12 +25,10 @@ export default function Home({searchValue}) {
         chosenItem: false,
         sortItemName: null
     });
-
     const setCategoryHandler = (e) => {
         const {activeId} = e.target.dataset;
         setCategoryId(activeId ?? null);
     };
-
     useEffect(() => {(
         async () => {
             console.log(page)
