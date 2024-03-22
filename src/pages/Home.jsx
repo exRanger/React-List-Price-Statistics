@@ -1,6 +1,6 @@
 import {useEffect, useState, useLayoutEffect} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setCategoryId } from '../redux/slices/filterSlice';
+import {useSelector, useDispatch} from 'react-redux';
+import {setCategoryId} from '../redux/slices/filterSlice';
 import Controller from '../getDataApi/apiController';
 import Categories from '../components/Categories/Categories';
 import PizzaItem from '../components/PizzaItem/PizzaItem';
