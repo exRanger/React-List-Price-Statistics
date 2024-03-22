@@ -33,7 +33,7 @@ export default function Home({searchValue}) {
     const setCategoryHandler = (e) => {
         const {activeId} = e.target.dataset;
         dispatch(
-            setCategoryId(activeId ?? null)
+            setCategoryId(activeId ?? null);
         );
     };
     useEffect(() => {(
