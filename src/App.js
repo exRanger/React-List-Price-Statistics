@@ -6,7 +6,6 @@ import {
     Outlet
 } from 'react-router-dom';
 import React, {createContext} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
 import Header from './components/Header';
 import {Card, Home, EmptyPage} from './pages';
 import './scss/app.scss';
