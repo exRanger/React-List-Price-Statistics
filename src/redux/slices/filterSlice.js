@@ -17,7 +17,7 @@ export const filterSlice = createSlice({
       state.categoryId = payload;
     }
   }
-})
+});
 
 export const { setCategoryId, decrement, incrementByAmount } = filterSlice.actions
 
