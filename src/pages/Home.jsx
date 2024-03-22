@@ -1,4 +1,6 @@
 import {useEffect, useState, useLayoutEffect} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setCategoryId } from '../redux/slices/filterSlice';
 import Controller from '../getDataApi/apiController';
 import Categories from '../components/Categories/Categories';
 import PizzaItem from '../components/PizzaItem/PizzaItem';
@@ -18,7 +20,11 @@ const LIMIT = 'limit=4';
 export default function Home({searchValue}) {
     const [pizzas, setPizzas] = useState([]);
     const [loadOff , setLoadOff] = useState(false);
-    const [categoryId, setCategoryId] = useState(null);
+    const dispatch = useDispatch();
+    // const [categoryId, setCategoryId] = useState(null);
+    // state
+    const categoryId = useSelector((state) => state.filter.categoryId);
+
     const [page, setPage] = useState(null);
     const [sort, setSort] = useState({
         isSortClicked: false,
@@ -27,7 +33,9 @@ export default function Home({searchValue}) {
     });
     const setCategoryHandler = (e) => {
         const {activeId} = e.target.dataset;
-        setCategoryId(activeId ?? null);
+        dispatch(
+            setCategoryId(activeId ?? null)
+        );
     };
     useEffect(() => {(
         async () => {
