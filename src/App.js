@@ -14,7 +14,6 @@ export const SearchContext = createContext('');
 
 function App() {
     const [searchValue, setSearchValue] = React.useState('');
-  
     const router = createBrowserRouter(
         createRoutesFromElements(
             <Route element={<Root/>}>
