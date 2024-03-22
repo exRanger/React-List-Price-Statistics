@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import {configureStore} from "@reduxjs/toolkit";
 import reducer from './slices/filterSlice';
 
 export const store = configureStore({
