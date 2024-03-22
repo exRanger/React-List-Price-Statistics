@@ -24,7 +24,6 @@ export default function Home({searchValue}) {
     // const [categoryId, setCategoryId] = useState(null);
     // state
     const categoryId = useSelector((state) => state.filter.categoryId);
-
     const [page, setPage] = useState(null);
     const [sort, setSort] = useState({
         isSortClicked: false,
