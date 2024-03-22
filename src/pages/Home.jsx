@@ -39,7 +39,7 @@ export default function Home({searchValue}) {
     useEffect(() => {(
         async () => {
             console.log(page)
-            // re-write to normal logic
+            // re-write to short logic
             const categoryIdState = categoryId !== null ? `?${CATEGORY_SEARCH_PARAM}=${categoryId}` : null;
             const sortValueState = sort.sortItemName !== null ? `${categoryIdState ? '&' : '?'}${SORTING_SEARCH_PARAM}=${sort.sortItemName}` : null;
             const searchValueState = searchValue ? `${categoryIdState || sortValueState ? '&' : '?'}${SEARCH_PARAM}=${searchValue}` : null;
