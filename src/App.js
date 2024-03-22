@@ -5,16 +5,21 @@ import {
     createRoutesFromElements,
     Outlet
 } from 'react-router-dom';
-import React from 'react';
+import React, {createContext} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement } from './redux/slices/filterSlice';
 import Header from './components/Header';
 import {Card, Home, EmptyPage} from './pages';
 import './scss/app.scss';
 
+export const SearchContext = createContext('');
+
 function App() {
     const [searchValue, setSearchValue] = React.useState('');
+  
     const router = createBrowserRouter(
         createRoutesFromElements(
-            <Route element={<Root searchValue={searchValue} setSearchValue={setSearchValue}/>}>
+            <Route element={<Root/>}>
                 <Route path='/' index element={<Home searchValue={searchValue}/>}/>
                 <Route path="/card" element={<Card/>}/>
                 <Route path="*" element={<EmptyPage/>}/>
@@ -22,11 +27,11 @@ function App() {
         )
     );
     return (
-        <>
+        <SearchContext.Provider value={{ searchValue, setSearchValue}}>
             <div className="wrapper">
                 <RouterProvider router={router}/>
             </div>
-        </>
+        </SearchContext.Provider>
     );
 }
 
