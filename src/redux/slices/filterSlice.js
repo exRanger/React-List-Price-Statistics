@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  categoryId: 0,
+  categoryId: null,
   sort: {
     isSortClicked: false,
     chosenItem: false,
@@ -14,7 +14,7 @@ export const filterSlice = createSlice({
   initialState,
   reducers: {
     setCategoryId (state, {payload}) {
-      state.categoryId = payload;
+      state.categoryId = Number(payload);
     }
   }
 })
