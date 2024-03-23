@@ -38,6 +38,6 @@ const Root = (props) => <>
         <Header {...props}/>
         <Outlet/> 
     </div>
-</>
+</>;
 
 export default App;
