@@ -7,7 +7,7 @@ const initialState = {
     chosenItem: false,
     sortItemName: null
   }
-}
+};
 
 export const filterSlice = createSlice({
   name: 'filters',
