@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setSort } from '../../redux/slices/filterSlice';
 
 /**
  * @component
@@ -22,24 +24,26 @@ const CloseButton = (props) => (
     </button>
 );
 
-export default function Sort({sort, setSort}) {
+export default function Sort() {
+    const dispatch = useDispatch();
+    const sort = useSelector((state) => state.filter.sort)
     const sortHandleClick = (e) => {
         let constSortKey = {
             isSortClicked: !sort.isSortClicked,
             chosenItem: e.target.dataset.sortId ?? sort.chosenItem,
             sortItemName: popupItems[e.target.dataset.sortId] || popupItems[sort.chosenItem] || null
         };
-        setSort(constSortKey);
+        dispatch(setSort(constSortKey));
     };
     const clearHandleClick = (e) => {
         e.stopPropagation();
-        setSort(
+        dispatch(setSort(
             {
                 ...sort,
                 chosenItem: null,
                 sortItemName: null
             }
-        );
+        ));
     };
     const popupItems = ['popularity', 'price', 'title', 'rating'];
     return (
