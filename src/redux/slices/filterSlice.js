@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   categoryId: null,
@@ -7,7 +7,7 @@ const initialState = {
     chosenItem: false,
     sortItemName: null
   }
-}
+};
 
 export const filterSlice = createSlice({
   name: 'filters',
@@ -20,8 +20,8 @@ export const filterSlice = createSlice({
       state.sort = payload;
     }
   }
-})
+});
 
 export const { setCategoryId, setSort, } = filterSlice.actions
 
-export default filterSlice.reducer
+export default filterSlice.reducer;
