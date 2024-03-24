@@ -23,14 +23,10 @@ export default function Home({searchValue}) {
     const dispatch = useDispatch();
     // const [categoryId, setCategoryId] = useState(null);
     // state
-    const categoryId = useSelector((state) => state.filter.categoryId);
+    const [categoryId, sort] = useSelector(({filter}) => [filter.categoryId, filter.sort]);
 
     const [page, setPage] = useState(null);
-    const [sort, setSort] = useState({
-        isSortClicked: false,
-        chosenItem: false,
-        sortItemName: null
-    });
+
     const setCategoryHandler = (e) => {
         const {activeId} = e.target.dataset;
         dispatch(
@@ -59,7 +55,7 @@ export default function Home({searchValue}) {
                 <div className="contentContainer">
                     <div className="contentContainer__top">
                         <Categories value={categoryId} setCategoryHandler={setCategoryHandler}/>
-                        <Sort sort={sort} setSort={setSort} />
+                        <Sort/>
                     </div>
                     <h2 className="contentContainer__title">All our products</h2>
                         <div className="contentContainer__items">
