@@ -6,8 +6,6 @@ import {
     Outlet
 } from 'react-router-dom';
 import React, {createContext} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from './redux/slices/filterSlice';
 import Header from './components/Header';
 import {Card, Home, EmptyPage} from './pages';
 import './scss/app.scss';
@@ -16,7 +14,6 @@ export const SearchContext = createContext('');
 
 function App() {
     const [searchValue, setSearchValue] = React.useState('');
-  
     const router = createBrowserRouter(
         createRoutesFromElements(
             <Route element={<Root/>}>
@@ -41,6 +38,6 @@ const Root = (props) => <>
         <Header {...props}/>
         <Outlet/> 
     </div>
-</>
+</>;
 
 export default App;
