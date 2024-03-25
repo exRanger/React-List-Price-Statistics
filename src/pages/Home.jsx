@@ -23,9 +23,7 @@ export default function Home({searchValue}) {
     const dispatch = useDispatch();
     // const [categoryId, setCategoryId] = useState(null);
     // state
-    const [categoryId, sort] = useSelector(({filter}) => [filter.categoryId, filter.sort]);
-
-    const [page, setPage] = useState(null);
+    const [categoryId, sort, page] = useSelector(({filter}) => [filter.categoryId, filter.sort, filter.page]);
 
     const setCategoryHandler = (e) => {
         const {activeId} = e.target.dataset;
@@ -67,7 +65,7 @@ export default function Home({searchValue}) {
                         </div>    
                 </div>
             </div>
-           <Pagination setPage={setPage}/>                
+           <Pagination page={page}/>                
         </>
     );
 }
