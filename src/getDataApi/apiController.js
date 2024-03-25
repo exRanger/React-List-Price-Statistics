@@ -1,4 +1,6 @@
 
+import axios from 'axios';
+
 const _defaultTestEndpoint = 'https://64e4886bc5556380291360e3.mockapi.io/Items';
 
 export default class Controller {
@@ -32,8 +34,8 @@ export default class Controller {
         if (page) {
             uri = uri + page;
         }
-        const res = await fetch(uri);
-        const data = await res.json();
+        const res = await axios.get(uri);
+        const data = await res.data;
         return data;
     }
 }
